@@ -1,0 +1,6 @@
+package com.example.wytvalley
+
+import io.flutter.embedding.android.FlutterActivity
+
+class MainActivity: FlutterActivity() {
+}
