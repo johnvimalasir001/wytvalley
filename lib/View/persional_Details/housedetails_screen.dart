@@ -59,7 +59,6 @@ class _HouseDetailsScreenState extends State<HouseDetailsScreen> {
                 CustomTextFormField(
                   textController: txtController,
                   hintText: "Enter house number",
-                  prefixIcon: const SizedBox(),
                 ),
                 const SizedBox(height: 20),
                 RichText(
@@ -84,7 +83,6 @@ class _HouseDetailsScreenState extends State<HouseDetailsScreen> {
                 CustomTextFormField(
                   textController: txtController,
                   hintText: "Enter house name",
-                  prefixIcon: const SizedBox(),
                 ),
                 const SizedBox(height: 20),
                 const Text(
@@ -98,7 +96,6 @@ class _HouseDetailsScreenState extends State<HouseDetailsScreen> {
                 CustomTextFormField(
                   textController: txtController,
                   hintText: "Select your floor",
-                  prefixIcon: const SizedBox(),
                 ),
                 const SizedBox(height: 20),
                 const Text(
@@ -112,7 +109,6 @@ class _HouseDetailsScreenState extends State<HouseDetailsScreen> {
                 CustomTextFormField(
                   textController: txtController,
                   hintText: "Enter Street/Colony name",
-                  prefixIcon: const SizedBox(),
                 ),
                 const SizedBox(height: 20),
                 RichText(
@@ -137,7 +133,6 @@ class _HouseDetailsScreenState extends State<HouseDetailsScreen> {
                 CustomTextFormField(
                   textController: txtController,
                   hintText: "Add Landmark",
-                  prefixIcon: const SizedBox(),
                 ),
                 const SizedBox(height: 20),
                 SizedBox(

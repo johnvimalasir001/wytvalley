@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wytvalley/View/Authentication/widgets/phonenumtextfield.dart';
 import 'package:wytvalley/View/persional_Details/profile_screen.dart';
 import 'package:wytvalley/Widget/widgets.dart';
 
@@ -57,8 +58,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   ),
                 ),
                 const SizedBox(height: 15),
-                CustomTextFormField(
-                  textController: txtController,
+                PhoneNumTextField(
                   hintText: "Enter 10 digit mobile number",
                   prefixIcon: Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 10),
@@ -80,6 +80,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       ],
                     ),
                   ),
+                  textController: txtController,
                 ),
                 const SizedBox(height: 35),
                 const Text(
@@ -94,7 +95,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 CustomTextFormField(
                   textController: rflController,
                   hintText: "Enter referal code",
-                  prefixIcon: const SizedBox(),
                 ),
                 const SizedBox(height: 40),
                 SizedBox(

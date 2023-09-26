@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wytvalley/View/Authentication/widgets/phonenumtextfield.dart';
 import 'package:wytvalley/View/views.dart';
 import 'package:wytvalley/Widget/widgets.dart';
 
@@ -61,8 +62,7 @@ class _SignInScreenState extends State<SignInScreen> {
                   ),
                 ),
                 const SizedBox(height: 25),
-                CustomTextFormField(
-                  textController: txtController,
+                PhoneNumTextField(
                   hintText: "Enter 10 digit mobile number",
                   prefixIcon: Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 10),
@@ -84,6 +84,7 @@ class _SignInScreenState extends State<SignInScreen> {
                       ],
                     ),
                   ),
+                  textController: txtController,
                 ),
                 const SizedBox(height: 35),
                 Text(

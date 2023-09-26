@@ -11,9 +11,29 @@ class ProfileScreen extends StatefulWidget {
 }
 
 class _ProfileScreenState extends State<ProfileScreen> {
+  DateTime? selectedDate;
+
+  void _showDatePicker() async {
+    final pickedDate = await showDatePicker(
+      context: context,
+      initialDate: DateTime.now(),
+      firstDate: DateTime(1980),
+      lastDate: DateTime(2024),
+    );
+
+    if (pickedDate != null && pickedDate != selectedDate) {
+      setState(() {
+        selectedDate = pickedDate;
+        dateController.text =
+            "${pickedDate.year}-${pickedDate.month}-${pickedDate.day}";
+      });
+    }
+  }
+
   bool isFemaleSelectedIndex = false;
   bool isMaleSelectedIndex = false;
   TextEditingController txtController = TextEditingController();
+  TextEditingController dateController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -64,7 +84,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 CustomTextFormField(
                   textController: txtController,
                   hintText: widget.phone,
-                  prefixIcon: const SizedBox(),
                 ),
                 const SizedBox(height: 20),
                 const Text(
@@ -78,7 +97,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 CustomTextFormField(
                   textController: txtController,
                   hintText: "Enter your First Name",
-                  prefixIcon: const SizedBox(),
                 ),
                 const SizedBox(height: 20),
                 const Text(
@@ -92,7 +110,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 CustomTextFormField(
                   textController: txtController,
                   hintText: "Enter your Last Name",
-                  prefixIcon: const SizedBox(),
                 ),
                 const SizedBox(height: 20),
                 const Text(
@@ -103,10 +120,45 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       color: Colors.black87),
                 ),
                 const SizedBox(height: 20),
-                CustomTextFormField(
-                  textController: txtController,
-                  hintText: "YYYY-MM-DD",
-                  prefixIcon: const SizedBox(),
+                TextFormField(
+                  keyboardType: const TextInputType.numberWithOptions(),
+                  cursorColor: Colors.black,
+                  controller: dateController,
+                  style: const TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black,
+                  ),
+                  decoration: InputDecoration(
+                      filled: true,
+                      fillColor: Colors.grey.shade200,
+                      hintText: "YYYY-MM-DD",
+                      hintStyle: const TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.w400,
+                        color: Colors.grey,
+                      ),
+                      enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(15),
+                        borderSide: BorderSide(color: Colors.grey.shade200),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(15),
+                        borderSide: BorderSide(color: Colors.grey.shade200),
+                      ),
+                      suffixIcon: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: IconButton(
+                          onPressed: () {
+                            _showDatePicker();
+                          },
+                          icon: const Icon(
+                            Icons.calendar_today_outlined,
+                            size: 25,
+                            color: Colors.blue,
+                          ),
+                        ),
+                      )),
                 ),
                 const SizedBox(height: 20),
                 Row(
@@ -234,7 +286,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 CustomTextFormField(
                   textController: txtController,
                   hintText: "Enter your Email address",
-                  prefixIcon: const SizedBox(),
                 ),
                 const SizedBox(height: 30),
                 SizedBox(

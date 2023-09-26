@@ -57,10 +57,40 @@ class _AddressScreenState extends State<AddressScreen> {
                       color: Colors.black87),
                 ),
                 const SizedBox(height: 20),
-                CustomTextFormField(
-                  textController: txtController,
-                  hintText: "Select your city",
-                  prefixIcon: const SizedBox(),
+                TextFormField(
+                  cursorColor: Colors.black,
+                  controller: txtController,
+                  style: const TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black,
+                  ),
+                  decoration: InputDecoration(
+                      filled: true,
+                      fillColor: Colors.grey.shade200,
+                      hintText: "Select your city",
+                      hintStyle: const TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.w400,
+                        color: Colors.grey,
+                      ),
+                      enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(15),
+                        borderSide: BorderSide(color: Colors.grey.shade200),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(15),
+                        borderSide: BorderSide(color: Colors.grey.shade200),
+                      ),
+                      suffixIcon: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: IconButton(
+                            onPressed: () {},
+                            icon: const Icon(
+                              Icons.pin_drop_outlined,
+                              size: 30,
+                            )),
+                      )),
                 ),
                 const SizedBox(height: 20),
                 const Text(
@@ -74,7 +104,6 @@ class _AddressScreenState extends State<AddressScreen> {
                 CustomTextFormField(
                   textController: txtController,
                   hintText: "Enter your pincode",
-                  prefixIcon: const SizedBox(),
                 ),
                 const SizedBox(height: 20),
                 const Text(
