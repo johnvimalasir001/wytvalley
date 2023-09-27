@@ -13,10 +13,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "WYTVALLEY",
-      home: LandingScreen(),
-      theme: ThemeData(
-        primarySwatch: Colors.yellow,
-      ),
+      home: const LandingScreen(),
+      theme: ThemeData.light(),
     );
   }
 }

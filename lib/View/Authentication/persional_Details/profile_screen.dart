@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:wytvalley/View/persional_Details/address_screen.dart';
+import 'package:wytvalley/View/Authentication/persional_Details/address_screen.dart';
 import 'package:wytvalley/Widget/widgets.dart';
 
 class ProfileScreen extends StatefulWidget {

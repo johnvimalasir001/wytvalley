@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wytvalley/View/views.dart';
 import 'package:wytvalley/Widget/widgets.dart';
 
 class HouseDetailsScreen extends StatefulWidget {
@@ -147,7 +148,8 @@ class _HouseDetailsScreenState extends State<HouseDetailsScreen> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const HouseDetailsScreen()),
+                          builder: (context) => const NavScreen(),
+                        ),
                       );
                     },
                     color: Colors.yellow.shade600,

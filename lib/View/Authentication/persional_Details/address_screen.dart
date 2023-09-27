@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:wytvalley/View/persional_Details/housedetails_screen.dart';
+import 'package:wytvalley/View/Authentication/persional_Details/housedetails_screen.dart';
 import 'package:wytvalley/Widget/widgets.dart';
 
 class AddressScreen extends StatefulWidget {

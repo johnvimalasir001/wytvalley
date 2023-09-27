@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:wytvalley/View/Authentication/widgets/phonenumtextfield.dart';
-import 'package:wytvalley/View/persional_Details/profile_screen.dart';
+import 'package:wytvalley/View/Authentication/persional_Details/profile_screen.dart';
 import 'package:wytvalley/Widget/widgets.dart';
 
 class SignUpScreen extends StatefulWidget {
